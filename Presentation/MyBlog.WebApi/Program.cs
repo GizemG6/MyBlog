@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using MyBlog.Persistence.Context;
 
 namespace MyBlog.WebApi
 {
@@ -6,6 +8,9 @@ namespace MyBlog.WebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<MyBlogContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
 

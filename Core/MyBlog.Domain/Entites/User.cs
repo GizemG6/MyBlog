@@ -14,6 +14,7 @@ namespace MyBlog.Domain.Entites
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public bool IsDeleted { get; set; }
         public Roles Roles { get; set; }
 
         public ICollection<Blog> Blogs { get; set; }
