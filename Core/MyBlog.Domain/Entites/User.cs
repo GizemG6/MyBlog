@@ -1,5 +1,4 @@
-﻿using MyBlog.Application.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +14,9 @@ namespace MyBlog.Domain.Entites
         public string Email { get; set; }
         public string Password { get; set; }
         public bool IsDeleted { get; set; }
-        public Roles Roles { get; set; }
+        
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
 
         public ICollection<Blog> Blogs { get; set; }
         public ICollection<Comment> Comments { get; set; }
