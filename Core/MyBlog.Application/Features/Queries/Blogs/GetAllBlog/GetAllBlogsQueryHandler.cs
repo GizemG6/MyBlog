@@ -26,7 +26,6 @@ namespace MyBlog.Application.Features.Queries.Blogs.GetAllBlog
                 Title = x.Title,
                 Content = x.Content,
                 CreatedDate = x.CreatedDate,
-                UserId = x.User.Id,
                 CategoryId = x.CategoryId
             }).ToList();
         }

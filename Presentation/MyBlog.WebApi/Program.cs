@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyBlog.Application.Interfaces;
 using MyBlog.Application.Services;
+using MyBlog.Persistence;
 using MyBlog.Persistence.Context;
 using MyBlog.Persistence.Repositories;
 
@@ -12,12 +13,7 @@ namespace MyBlog.WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<MyBlogContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            // Add services to the container.
-            builder.Services.AddScoped<MyBlogContext>();
-            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            builder.Services.AddPersistenceServices(builder.Configuration);
 
             builder.Services.AddApplicationServices(builder.Configuration);
 
