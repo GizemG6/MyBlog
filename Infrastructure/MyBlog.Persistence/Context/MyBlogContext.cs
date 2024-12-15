@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MyBlog.Domain.Entites;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MyBlog.Persistence.Context
 {
-    public class MyBlogContext : DbContext
+    public class MyBlogContext : IdentityDbContext<User>
     {
         public MyBlogContext(DbContextOptions options) : base(options) { }
 
