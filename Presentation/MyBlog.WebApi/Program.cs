@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using MyBlog.Application.Interfaces;
 using MyBlog.Application.Services;
-using MyBlog.Persistence;
 using MyBlog.Persistence.Context;
 using MyBlog.Persistence.Repositories;
+using MyBlog.Persistence.Services;
 
 namespace MyBlog.WebApi
 {

@@ -14,7 +14,7 @@ namespace MyBlog.Application.Features.Queries.Blogs.GetAllBlog
         public DateTime CreatedDate { get; set; }
         public bool IsDeleted { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public int CategoryId { get; set; }
     }
 }

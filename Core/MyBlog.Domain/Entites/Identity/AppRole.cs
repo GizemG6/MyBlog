@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyBlog.Domain.Entites.Identity
 {
-    public class AppRole : IdentityRole<string>
+    public class AppRole : IdentityRole
     {
     }
 }
