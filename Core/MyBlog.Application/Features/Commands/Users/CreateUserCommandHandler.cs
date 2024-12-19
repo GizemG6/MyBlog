@@ -24,7 +24,6 @@ namespace MyBlog.Application.Features.Commands.Users
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            // Kullanıcı oluşturuluyor
             var user = new AppUser()
             {
                 Id = Guid.NewGuid().ToString(),
@@ -34,18 +33,15 @@ namespace MyBlog.Application.Features.Commands.Users
                 Email = request.Email
             };
 
-            // Kullanıcı veritabanına ekleniyor
             IdentityResult result = await _userManager.CreateAsync(user, request.Password);
 
             var response = new CreateUserCommandResponse();
 
             if (result.Succeeded)
             {
-                // Rol kontrol ediliyor
                 var roleExist = await _roleManager.RoleExistsAsync(request.RoleName);
                 if (roleExist)
                 {
-                    // Rol atanıyor
                     IdentityResult roleResult = await _userManager.AddToRoleAsync(user, request.RoleName);
                     if (roleResult.Succeeded)
                     {
@@ -70,7 +66,6 @@ namespace MyBlog.Application.Features.Commands.Users
             }
             else
             {
-                // Kullanıcı oluşturulamadıysa hata mesajları ekleniyor
                 response.Successed = false;
                 response.Message = "Kullanıcı oluşturulamadı. Hatalar:";
                 foreach (var error in result.Errors)

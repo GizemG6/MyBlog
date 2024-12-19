@@ -22,5 +22,12 @@ namespace MyBlog.WebApi.Controllers
             CreateUserCommandResponse reponse = await _mediator.Send(createUserCommandRequest);
             return Ok(reponse);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser(UpdateUserCommandRequest updateUserCommandRequest)
+        {
+            UpdateUserCommandResponse response = await _mediator.Send(updateUserCommandRequest);
+            return Ok(response);
+        }
     }
 }
