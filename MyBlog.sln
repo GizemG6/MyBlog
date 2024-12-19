@@ -5,21 +5,23 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{69641CD0-8972-4215-A314-7B2277AA4A01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.Domain", "Core\MyBlog.Domain\MyBlog.Domain.csproj", "{3663D993-ADF3-41C3-B909-2D601CE2742B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlog.Domain", "Core\MyBlog.Domain\MyBlog.Domain.csproj", "{3663D993-ADF3-41C3-B909-2D601CE2742B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.Application", "Core\MyBlog.Application\MyBlog.Application.csproj", "{D1D95782-A3C0-4A1E-A3AC-69D2A3C811B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlog.Application", "Core\MyBlog.Application\MyBlog.Application.csproj", "{D1D95782-A3C0-4A1E-A3AC-69D2A3C811B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{EB9158FE-EF06-4DDA-A63B-D2CD1AE6D1A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.WebUI", "Frontend\MyBlog.WebUI\MyBlog.WebUI.csproj", "{D3AA26C7-08B8-48E6-AD50-E39AC84A3A1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlog.WebUI", "Frontend\MyBlog.WebUI\MyBlog.WebUI.csproj", "{D3AA26C7-08B8-48E6-AD50-E39AC84A3A1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{20FAB7D9-AA67-44C9-BF62-BCA5A59B4B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.Persistence", "Infrastructure\MyBlog.Persistence\MyBlog.Persistence.csproj", "{7C5A806A-2504-4A2B-BDB5-1A47A770E554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlog.Persistence", "Infrastructure\MyBlog.Persistence\MyBlog.Persistence.csproj", "{7C5A806A-2504-4A2B-BDB5-1A47A770E554}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{53D65006-E01F-4064-85FC-3E8D211A9A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.WebApi", "Presentation\MyBlog.WebApi\MyBlog.WebApi.csproj", "{2D781576-318A-4706-A449-1DB0624E1F09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlog.WebApi", "Presentation\MyBlog.WebApi\MyBlog.WebApi.csproj", "{2D781576-318A-4706-A449-1DB0624E1F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog.Dto", "MyBlog.Dto\MyBlog.Dto.csproj", "{636C05C8-35DD-4392-8C59-9D0AB0016412}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{2D781576-318A-4706-A449-1DB0624E1F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D781576-318A-4706-A449-1DB0624E1F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D781576-318A-4706-A449-1DB0624E1F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636C05C8-35DD-4392-8C59-9D0AB0016412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636C05C8-35DD-4392-8C59-9D0AB0016412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636C05C8-35DD-4392-8C59-9D0AB0016412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636C05C8-35DD-4392-8C59-9D0AB0016412}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{D3AA26C7-08B8-48E6-AD50-E39AC84A3A1D} = {EB9158FE-EF06-4DDA-A63B-D2CD1AE6D1A3}
 		{7C5A806A-2504-4A2B-BDB5-1A47A770E554} = {20FAB7D9-AA67-44C9-BF62-BCA5A59B4B50}
 		{2D781576-318A-4706-A449-1DB0624E1F09} = {53D65006-E01F-4064-85FC-3E8D211A9A9D}
+		{636C05C8-35DD-4392-8C59-9D0AB0016412} = {EB9158FE-EF06-4DDA-A63B-D2CD1AE6D1A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19AE82B6-C2FE-492E-961B-78D222A2D768}
