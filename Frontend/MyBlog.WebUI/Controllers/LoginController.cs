@@ -7,13 +7,11 @@ namespace MyBlog.WebUI.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
 
-        public LoginController(IHttpClientFactory httpClientFactory, SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+        public LoginController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
         {
-            _httpClientFactory = httpClientFactory;
             _signInManager = signInManager;
             _userManager = userManager;
         }
@@ -36,7 +34,7 @@ namespace MyBlog.WebUI.Controllers
 
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Home"); // Redirect to home page on successful login
+                        return RedirectToAction("Index", "Home"); 
                     }
                     else
                     {
