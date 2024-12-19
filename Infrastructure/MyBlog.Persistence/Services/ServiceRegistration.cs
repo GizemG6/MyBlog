@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MyBlog.Application.Interfaces;
 using MyBlog.Domain.Entites.Identity;
 using MyBlog.Persistence.Context;
+using MyBlog.Persistence.Identity;
 using MyBlog.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,6 @@ namespace MyBlog.Persistence.Services
             }).AddEntityFrameworkStores<MyBlogContext>().AddDefaultTokenProviders();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
         }
     }
 }

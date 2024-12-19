@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MyBlog.Application.Interfaces;
 using MyBlog.Application.Services;
 using MyBlog.Persistence.Context;
+using MyBlog.Persistence.Identity;
 using MyBlog.Persistence.Repositories;
 using MyBlog.Persistence.Services;
 
@@ -9,7 +10,7 @@ namespace MyBlog.WebApi
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,12 @@ namespace MyBlog.WebApi
 
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                await RoleSeeder.SeedRolesAsync(services); // Rolleri seed et
+            }
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -32,6 +39,8 @@ namespace MyBlog.WebApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
