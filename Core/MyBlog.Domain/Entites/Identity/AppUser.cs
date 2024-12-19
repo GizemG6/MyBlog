@@ -11,6 +11,7 @@ namespace MyBlog.Domain.Entites.Identity
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Password { get; set; }
 
         public ICollection<Blog> Blogs { get; set; }
         public ICollection<Comment> Comments { get; set; }

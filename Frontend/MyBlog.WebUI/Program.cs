@@ -1,3 +1,7 @@
+
+
+using MyBlog.Persistence.Services;
+
 namespace MyBlog.WebUI
 {
     public class Program
@@ -8,6 +12,10 @@ namespace MyBlog.WebUI
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddPersistenceServices(builder.Configuration);
+
+            builder.Services.AddHttpClient();
 
             var app = builder.Build();
 

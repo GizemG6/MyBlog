@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MyBlog.Domain\MyBlog.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\MyBlog.Persistence\MyBlog.Persistence.csproj" />
+    <ProjectReference Include="..\..\MyBlog.Dto\MyBlog.Dto.csproj" />
+  </ItemGroup>
+
 </Project>

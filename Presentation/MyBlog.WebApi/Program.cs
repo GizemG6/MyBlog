@@ -23,6 +23,8 @@ namespace MyBlog.WebApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddHttpClient();
+
             var app = builder.Build();
 
             using (var scope = app.Services.CreateScope())

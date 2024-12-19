@@ -30,7 +30,8 @@ namespace MyBlog.Application.Features.Commands.Users
                 UserName = request.UserName,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Email = request.Email
+                Email = request.Email,
+                Password = request.Password
             };
 
             IdentityResult result = await _userManager.CreateAsync(user, request.Password);
